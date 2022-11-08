@@ -13,9 +13,11 @@ const AllServices = () => {
                         <div className="card-body">
                             <h2 className="card-title">{service.name}</h2>
                             <h2 className='text-lg font-semibold'>Price: ${service.price}</h2>
-                            <p>{service.details.slice(0, 200) + '...'}<Link className='link link-primary' to={``}>Read More</Link></p>
+                            <p>{service.details.slice(0, 200) + '...'}<Link className='link link-primary' to={`services/${service._id}`}>Read More</Link></p>
                             <div className="card-actions justify-end">
-                                <button className="btn btn-outline btn-primary rounded-full"><FaArrowRight /></button>
+                                <Link to={`services/${service._id}`}>
+                                    <button className="btn btn-outline btn-primary rounded-full"><FaArrowRight /></button>
+                                </Link>
                             </div>
                         </div>
                     </div>
