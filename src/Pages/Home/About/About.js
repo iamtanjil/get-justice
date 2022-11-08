@@ -1,6 +1,7 @@
 import React from 'react';
 import img from '../../../assests/about.png'
 
+
 const About = () => {
     return (
         <div>
