@@ -6,7 +6,7 @@ const About = () => {
     return (
         <div>
             <h2 className='text-5xl text-center font-bold'>About Us</h2>
-            <div className="card lg:card-side bg-base-100 shadow-xl m-5">
+            <div className="card lg:card-side bg-base-100 shadow-md m-5">
                 <figure><img src={img} alt="Album"className='lg:h-80 lg:w-80' /></figure>
                 <div className="card-body w-96">
                     <h2 className="card-title text-3xl font-medium">About GetJustice</h2>

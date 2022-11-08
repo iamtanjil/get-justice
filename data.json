@@ -1,0 +1,49 @@
+[
+    {
+        "name": "Writ",
+        "price": 100,
+        "details": "A writ is an order issued by a legal authority with administrative or judicial powers, typically a court.The term writ refers to a formal, legal document that orders a person or entity to perform or to cease performing a specific action or deed. Writs are drafted by judges, courts, or other entities that have administrative or judicial jurisdiction. These documents are part of common law and are often issued after a judgment is made, giving those involved in a suit the ability to carry out the judgment.",
+        "img": "https://ibb.co/7RGmJth",
+        "duration": 7
+    },
+    {
+        "name": "Quashment",
+        "price": 100,
+        "details": " In criminal cases, when an indictment is so defective that no judgment can be given upon it, should the defendant be convicted, the court, upon application, will in general quash it; as if it have no jurisdiction of the offence charged, or when the matter charged is not indictable. 1 Burr. 516, 548; Andr. 226. When the application to quash is made on the part of the defendant, the court generally refuses to quash the indictment when it appears some enormous crime has been committed. Com. Dig. Indictment, H; Wils. 325; 1 Salk. 372; 3 T. R. 621; 6 Mod. 42; 3 Burr. 1841; 5 Mod. 13; Bac. Abr. Indictment, K. When the application is made on the part of the prosecution, the indictment will be quashed whenever it is defective so that the defendant cannot be convicted, and the prosecution appears to be bona fide. If the prosecution be instituted by the attorney general, he may, in some states, enter a nolle prosequi, which has the same effect. 1 Dougl. 239, 240. The application should be made before plea pleaded; Leach, 11; 4 St. Tr. 232; 1 Hale, 35; Fost. 231; and before the defendant's recognizance has been forfeited. 1 Salk. 380. Vide Cassetur Breve.",
+        "img": "https://ibb.co/5YwbH1x",
+        "duration": 10
+    },
+    {
+        "name": "Anticipatory Bail",
+        "price": 100,
+        "details": "Under Indian criminal law, there is a provision for anticipatory bail under Section 438(1) of the Criminal Procedure Code. Law Commission of India in its 41st report recommended to incorporate this provision in procedure code.[1] This provision allows a person to seek bail in anticipation of an arrest on accusation of having committed a non-bailable offence.On filing anticipatory bail, the opposing party is notified about the bail application and the opposition can then contest the bail application in court (public prosecutor can also be used to do this).Anticipatory bail is a direction to release a person on bail, issued even before the person is arrested. It is only issued by the Sessions Court and High Court.",
+        "img": "https://ibb.co/Fmh99z0",
+        "duration": 15
+    },
+    {
+        "name": "Revision",
+        "price": 100,
+        "details": "Revision is the re-examination of legal actions. They may be some assumptions made illegally, non-exercise or exercise of jurisdiction irregularly by a lower court. In this case,, therefore, a higher court reexamines the decisions made by a lower court to know whether all the legal actions were exercised.Unlike the appeal, revision is not a statutory right. The superior court therefore can decide to examine or not examine a decision made by a lower court. The main primary purpose of a revision is to make sure that justice has been administered properly and also to correct any errors that could have led to improper justice.",
+        "img": "https://ibb.co/pR5S9SV",
+        "duration": 10
+    },
+    {
+        "name": "Appeal",
+        "price": 100,
+        "details": "An appeal is a challenge to a previous legal determination. An appeal is directed towards a legal power higher than the power making the challenged determination. In most states and the federal system, trial court determinations can be appealed in an appellate court. The rulings of those appellate courts may be reviewed by a court of last resort. In the federal court system, that is the United States Supreme Court.  The person pursuing an appeal is called an appellant, while the person defending the lower court’s ruling is the appellee or respondent.Appeals can be either discretionary or of right.  An appeal of right is one that the higher court must hear, if the losing party demands it, while a discretionary appeal is one that the higher court may, but does not have to, consider. For example, in the federal system, there is an appeal of right from the District Court to the Court of Appeals but appeals from the Court of Appeals to the Supreme Court are discretionary.",
+        "img": "https://ibb.co/Bj81Nzk",
+        "duration": 20
+    },
+    {
+        "name": "Divorce",
+        "price": 100,
+        "details": "Divorce (also known as dissolution of marriage) is the process of terminating a marriage or marital union.[1] Divorce usually entails the canceling or reorganizing of the legal duties and responsibilities of marriage, thus dissolving the bonds of matrimony between a married couple under the rule of law of the particular country or state. Divorce laws vary considerably around the world,[1] but in most countries, divorce requires the sanction of a court or other authority in a legal process, which may involve issues of distribution of property,[2] child custody,[2] alimony (spousal support), child visitation / access, parenting time, child support, and division of debt. In most countries, monogamy is required by law, so divorce allows each former partner to marry another person.",
+        "img": "https://ibb.co/k8DTLb0",
+        "duration": 15
+    }
+]
+
+
+
+
+

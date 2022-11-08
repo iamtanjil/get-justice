@@ -5,14 +5,14 @@ import logo from '../../../assests/logo.png'
 const Header = () => {
 
     const navItems = <>
-        <li><Link>Home</Link></li>
-        <li><Link>Services</Link></li>
-        <li><Link>Blog</Link></li>
-        <li><Link>Contact Us</Link></li>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/services'>Services</Link></li>
+        <li><Link to='/'>Blog</Link></li>
+        <li><Link to='/'>Contact Us</Link></li>
     </>
         
     return (
-        <div className="navbar bg-base-200 shadow-xl rounded-b-lg">
+        <div className="navbar bg-base-200 shadow-md rounded-b-lg">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
