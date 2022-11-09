@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa";
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const Services = () => {
     const [limitedservice, seLimitedservice] = useState([]);
@@ -17,7 +18,13 @@ const Services = () => {
                 {
                     limitedservice.map(service =>
                         <div className="card card-compact w-96 bg-base-100 shadow-xl m-3">
-                            <figure><img src={service.img} alt="Shoes" /></figure>
+                            <figure>
+                                <PhotoProvider>
+                                    <PhotoView src={service.img}>
+                                        <img src={service.img} alt="Shoes" />
+                                    </PhotoView>
+                                </PhotoProvider>
+                            </figure>
                             <div className="card-body">
                                 <h2 className="card-title">{service.name}</h2>
                                 <h2 className='text-lg font-semibold'>Price: ${service.price}</h2>
