@@ -1,4 +1,3 @@
-import React, { useContext } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 
