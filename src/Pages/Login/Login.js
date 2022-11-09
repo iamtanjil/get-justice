@@ -1,11 +1,20 @@
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import loginImg from '../../assests/man-min.png'
 import { AuthProvider } from '../../Contexts/AuthContext';
 
+
+
 const Login = () => {
-    const {signIn} = useContext(AuthProvider);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname;
+
+
+    const {signIn, setLoading} = useContext(AuthProvider);
+
+
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
@@ -16,9 +25,17 @@ const Login = () => {
         .then(result => {
             const user = result.user;
             toast.success('Login Successfully')
-            console.log(user);
+            if(user){
+                navigate(from, { replace: true });
+            }
+            else{
+                toast.error('Invalid Login Details');
+            }
         })
         .catch(error => console.error(error))
+        .finally(()=>{
+            setLoading(false);
+        })
     }
     return (
         <div className='p-7 mx-auto'>

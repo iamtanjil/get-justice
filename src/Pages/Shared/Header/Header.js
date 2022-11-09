@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../assests/logo.png'
+import { AuthProvider } from '../../../Contexts/AuthContext';
 
 const Header = () => {
+    const {user, logOut} = useContext(AuthProvider);
 
     const navItems = <>
         <li><Link to='/'>Home</Link></li>
@@ -36,7 +38,10 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/login' className="btn btn-outline btn-primary">Login</Link>
+                {
+                    user ? <button onClick={logOut} className="btn btn-outline btn-primary">Logout</button>
+                    : <Link to='/login' className="btn btn-outline btn-primary">Login</Link>
+                }
             </div>
         </div>
     );
