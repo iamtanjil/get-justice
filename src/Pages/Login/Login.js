@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import loginImg from '../../assests/man-min.png'
+import { AuthProvider } from '../../Contexts/AuthContext';
 
 const Login = () => {
+    const {signIn} = useContext(AuthProvider);
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(email, password);
+        signIn(email, password)
+        .then(result => {
+            const user = result.user;
+            toast.success('Login Successfully')
+            console.log(user);
+        })
+        .catch(error => console.error(error))
     }
     return (
         <div className='p-7 mx-auto'>
