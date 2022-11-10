@@ -5,11 +5,13 @@ import loginImg from '../../assests/man-min.png'
 import { AuthProvider } from '../../Contexts/AuthContext';
 import { FcGoogle } from "react-icons/fc";
 import { GoogleAuthProvider } from 'firebase/auth';
+import useTitle from '../../hooks/useTitle';
 
 
 const provider = new GoogleAuthProvider();
 
 const Login = () => {
+    useTitle('Login')
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';

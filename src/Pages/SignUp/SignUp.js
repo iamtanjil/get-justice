@@ -3,8 +3,10 @@ import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import loginImg from '../../assests/man-min.png'
 import { AuthProvider } from '../../Contexts/AuthContext';
+import useTitle from '../../hooks/useTitle';
 
 const SignUp = () => {
+    useTitle('SignUp')
     const {createUser} = useContext(AuthProvider);
     const handleSignUp = event => {
         event.preventDefault();

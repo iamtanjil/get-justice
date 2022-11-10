@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import AddService from "../Pages/Addservice/AddService";
+import Blog from "../Pages/Blog/Blog";
 import Home from "../Pages/Home/Home/Home";
 import AllServices from "../Pages/Home/Services/AllServices";
 import Login from "../Pages/Login/Login";
@@ -21,12 +22,12 @@ const router = createBrowserRouter([
             {
                 path:'/services',
                 element: <AllServices></AllServices>,
-                loader: () => fetch('http://localhost:5000/allservices')
+                loader: () => fetch('https://assignment-11-server-wine.vercel.app/allservices')
             },
             {
                 path: '/services/services/:id',
                 element: <ServiceInfo></ServiceInfo>,
-                loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({params}) => fetch(`https://assignment-11-server-wine.vercel.app/services/${params.id}`)
             },
             {
                 path:'/login',
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
             {
                 path:'/addservice',
                 element: <PrivateRoutes><AddService></AddService></PrivateRoutes>
+            },
+            {
+                path:'/blog',
+                element: <Blog></Blog>
             }
         ]
     }

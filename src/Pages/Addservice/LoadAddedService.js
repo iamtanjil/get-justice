@@ -4,7 +4,7 @@ import ShowAddedService from './ShowAddedService';
 const LoadAddedService = () => {
     const [addedService, setAddedService] =useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/addedservice')
+        fetch('https://assignment-11-server-wine.vercel.app/addedservice')
         .then(res => res.json())
         .then(data => setAddedService(data))
     }, [])

@@ -1,7 +1,9 @@
 import { FaArrowRight } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
+import useTitle from '../../../hooks/useTitle';
 
 const AllServices = () => {
+    useTitle('Service')
     const services = useLoaderData();
     return (
         <div className='col-span-1 lg:grid grid-cols-3 lg:gap-4 m-7'>

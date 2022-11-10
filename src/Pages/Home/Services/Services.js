@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa";
 import { PhotoProvider, PhotoView } from 'react-photo-view';
+import useTitle from '../../../hooks/useTitle';
 
 const Services = () => {
+    useTitle('Services')
     const [limitedservice, seLimitedservice] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/limitedservice')
+        fetch('https://assignment-11-server-wine.vercel.app/limitedservice')
             .then(res => res.json())
             .then(data => seLimitedservice(data))
     }, [])

@@ -2,9 +2,11 @@ import React, { useContext, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthProvider } from '../../Contexts/AuthContext';
+import useTitle from '../../hooks/useTitle';
 import ReviewCard from './Review';
 
 const ServiceInfo = () => {
+    useTitle('Service')
     const serviceInfo = useLoaderData();
     const { user } = useContext(AuthProvider)
     localStorage.setItem('userEmail', user?.email);
@@ -28,7 +30,7 @@ const ServiceInfo = () => {
             review
         }
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://assignment-11-server-wine.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -46,7 +48,7 @@ const ServiceInfo = () => {
 
     }
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://assignment-11-server-wine.vercel.app/review')
             .then(res => res.json())
             .then(data => setReview(data))
     }, [user])

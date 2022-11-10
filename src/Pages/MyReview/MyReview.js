@@ -1,20 +1,22 @@
 import React, { useContext, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { AuthProvider } from '../../Contexts/AuthContext';
+import useTitle from '../../hooks/useTitle';
 
 const MyReview = () => {
+    useTitle('My Review')
     const { user } = useContext(AuthProvider)
     const [myreview, setMyReivew] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myreview?email=${user.email}`)
+        fetch(`https://assignment-11-server-wine.vercel.app/myreview?email=${user.email}`)
             .then(res => res.json())
             .then(data => setMyReivew(data))
     }, [])
     const handleDelte = id => {
         const proceed = window.confirm('Are you sure, you want to delete this review?');
         if (proceed) {
-            fetch(`http://localhost:5000/review/${id}`, {
+            fetch(`https://assignment-11-server-wine.vercel.app/review/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -69,7 +71,7 @@ const MyReview = () => {
                                             </div>
                                         </td>
                                         <td>
-                                            <textarea  defaultValue={review.review} className="textarea textarea-primary" placeholder="Bio"></textarea>
+                                            <textarea defaultValue={review.review} className="textarea textarea-primary" placeholder="Bio"></textarea>
                                         </td>
                                         <th>
                                             <button className="btn btn-ghost btn-xs">Update</button>
