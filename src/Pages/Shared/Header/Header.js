@@ -13,7 +13,7 @@ const Header = () => {
         <li><Link to='/'>Contact Us</Link></li>
         {
             user && <>
-                <li><Link to='/'>My Review</Link></li>
+                <li><Link to='/myreview'>My Review</Link></li>
                 <li><Link to='/'>Add Service</Link></li>
             </>
         }

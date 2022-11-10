@@ -3,6 +3,7 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import AllServices from "../Pages/Home/Services/AllServices";
 import Login from "../Pages/Login/Login";
+import MyReview from "../Pages/MyReview/MyReview";
 import ServiceInfo from "../Pages/ServiceInfo/ServiceInfo";
 import SignUp from "../Pages/SignUp/SignUp";
 import PrivateRoutes from "./PrivateRoutes";
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'/myreview',
-                element: ''
+                element: <PrivateRoutes><MyReview></MyReview></PrivateRoutes>,
             }
         ]
     }
