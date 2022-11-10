@@ -4,15 +4,21 @@ import logo from '../../../assests/logo.png'
 import { AuthProvider } from '../../../Contexts/AuthContext';
 
 const Header = () => {
-    const {user, logOut} = useContext(AuthProvider);
+    const { user, logOut } = useContext(AuthProvider);
 
     const navItems = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/services'>Services</Link></li>
         <li><Link to='/'>Blog</Link></li>
         <li><Link to='/'>Contact Us</Link></li>
+        {
+            user && <>
+                <li><Link to='/'>My Review</Link></li>
+                <li><Link to='/'>Add Service</Link></li>
+            </>
+        }
     </>
-        
+
     return (
         <div className="navbar bg-base-200 shadow-md rounded-b-lg">
             <div className="navbar-start">
@@ -40,7 +46,7 @@ const Header = () => {
             <div className="navbar-end">
                 {
                     user ? <button onClick={logOut} className="btn btn-outline btn-primary">Logout</button>
-                    : <Link to='/login' className="btn btn-outline btn-primary">Login</Link>
+                        : <Link to='/login' className="btn btn-outline btn-primary">Login</Link>
                 }
             </div>
         </div>
